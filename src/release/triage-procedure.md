@@ -130,3 +130,11 @@ each PR:
 
 Once you are done triaging PRs, post your report in the topic for the current
 week's triage in the `#t-release/triage` Zulip stream.
+the topic should have a name like `YYYY-MM-DD to YYYY-MM-DD`.
+if a topic does not exist, you can generate it's title with
+the following bash oneliner (requires GNU date):
+`echo "$(date -I --date="$([ "z$(date +%a)" = "zSun" ] && echo 'today' || echo 'last sunday')") to $(date -I --date="$([ "z$(date
+ +%a)" = "zSat" ] && echo 'today' || echo 'next saturday')")"`
+
+#### Avoiding duplicate work
+If a PR's labels are still accurate, it can be worth it to remove and re-add a label in order to update the last-modified timestamp, preventing it from turning up in other triagers searches.
