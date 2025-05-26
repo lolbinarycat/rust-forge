@@ -37,6 +37,7 @@ The release note text is automatically pulled in subsequent steps, and should us
 * Library
 * Stabilized APIs
 * Const Stabilized APIs
+* Rustdoc
 * Language
 * Compiler
 * Internal Changes
